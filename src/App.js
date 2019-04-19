@@ -3,15 +3,14 @@ import React from "react";
 import TodoItem from "./components/TodoItem.js";
 
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       todos: []
     }
-    this.handleChange = this.handleChange.bind(this)
   }
 
-  handleChange(id) {
+  handleChange = (id) => {
     this.setState(prevState => {
       const updatedTodos = prevState.todos.map(t => {
         if (t.id === id) {
