@@ -8,6 +8,21 @@ class App extends React.Component {
     this.state = {
       todos: []
     }
+    this.handleChange = this.handleChange.bind(this)
+  }
+
+  handleChange(id) {
+    this.setState(prevState => {
+      const updatedTodos = prevState.todos.map(t => {
+        if (t.id === id) {
+          t.completed = !t.completed;
+        }
+        return t
+      })
+      return {
+        todos: updatedTodos
+      }
+    })
   }
 
   componentDidMount() {
@@ -21,6 +36,7 @@ class App extends React.Component {
       <TodoItem
         key={item.id}
         task={item}
+        handleChange={this.handleChange}
       />
     )
     return (

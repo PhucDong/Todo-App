@@ -7,6 +7,7 @@ const TodoItem = (props) => {
                 type="checkbox"
                 id={props.task.id}
                 checked={props.task.completed}
+                onChange={() => props.handleChange(props.task.id)}
             />
             <label
                 htmlFor={props.task.id}
