@@ -1,6 +1,7 @@
 import React from "react";
 
 import TodoItem from "./components/TodoItem.js";
+import "./styles/App.css";
 
 class App extends React.Component {
   constructor(props) {
@@ -28,7 +29,7 @@ class App extends React.Component {
     fetch("https://jsonplaceholder.typicode.com/todos")
       .then(response => response.json())
       .then(json => {
-        const filteredTodos = json.filter(todo => todo.title.length < 24);
+        const filteredTodos = json.filter(todo => todo.title.length < 18);
         this.setState({ todos: filteredTodos })
       })
   }
@@ -42,7 +43,7 @@ class App extends React.Component {
       />
     )
     return (
-      <div>
+      <div className="container">
         {todosArray}
       </div>
     )

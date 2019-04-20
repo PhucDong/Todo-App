@@ -2,7 +2,7 @@ import React from "react";
 
 const TodoItem = (props) => {
     return (
-        <div>
+        <div className="todo-item">
             <input
                 type="checkbox"
                 id={props.task.id}
@@ -11,6 +11,7 @@ const TodoItem = (props) => {
             />
             <label
                 htmlFor={props.task.id}
+                className={props.task.completed ? "display-status" : null}
             >
                 {props.task.title}
             </label>
