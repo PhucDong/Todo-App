@@ -27,7 +27,10 @@ class App extends React.Component {
   componentDidMount() {
     fetch("https://jsonplaceholder.typicode.com/todos")
       .then(response => response.json())
-      .then(json => this.setState({ todos: json }))
+      .then(json => {
+        const filteredTodos = json.filter(todo => todo.title.length < 24);
+        this.setState({ todos: filteredTodos })
+      })
   }
 
   render() {
