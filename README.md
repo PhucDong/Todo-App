@@ -8,3 +8,7 @@ This app is a result from what I have learned about the basics of React.js
 ```
 npm init react-app my-app
 ```
+
+```
+npm install react-router-dom
+```

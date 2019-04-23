@@ -6,3 +6,9 @@
 - Adding filter function to filter out data that satisfy a certain condition.
 
 - Adding CSS rules to the todo app.
+<br/>
+<br/>
+
+## 23rd April 2019
+
+Decreasing the blur effect of the box-shadow property.
