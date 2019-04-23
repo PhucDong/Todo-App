@@ -11,4 +11,5 @@
 
 ## 23rd April 2019
 
-Decreasing the blur effect of the box-shadow property.
+- Decreasing the blur effect of the box-shadow property.
+- Adding navigation using React Router.
